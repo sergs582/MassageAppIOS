@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		876E982222EB313800320D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876E982122EB313800320D52 /* AppDelegate.swift */; };
+		876E982422EB313800320D52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876E982322EB313800320D52 /* ViewController.swift */; };
+		876E982722EB313800320D52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876E982522EB313800320D52 /* Main.storyboard */; };
+		876E982922EB313900320D52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 876E982822EB313900320D52 /* Assets.xcassets */; };
+		876E982C22EB313900320D52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876E982A22EB313900320D52 /* LaunchScreen.storyboard */; };
+		876E983722EB313900320D52 /* MassageAppIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876E983622EB313900320D52 /* MassageAppIOSTests.swift */; };
+		876E984222EB313900320D52 /* MassageAppIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876E984122EB313900320D52 /* MassageAppIOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		876E983322EB313900320D52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 876E981622EB313800320D52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 876E981D22EB313800320D52;
+			remoteInfo = MassageAppIOS;
+		};
+		876E983E22EB313900320D52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 876E981622EB313800320D52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 876E981D22EB313800320D52;
+			remoteInfo = MassageAppIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		876E981E22EB313800320D52 /* MassageAppIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MassageAppIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		876E982122EB313800320D52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		876E982322EB313800320D52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		876E982622EB313800320D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		876E982822EB313900320D52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		876E982B22EB313900320D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		876E982D22EB313900320D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		876E983222EB313900320D52 /* MassageAppIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MassageAppIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		876E983622EB313900320D52 /* MassageAppIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassageAppIOSTests.swift; sourceTree = "<group>"; };
+		876E983822EB313900320D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		876E983D22EB313900320D52 /* MassageAppIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MassageAppIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		876E984122EB313900320D52 /* MassageAppIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassageAppIOSUITests.swift; sourceTree = "<group>"; };
+		876E984322EB313900320D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		876E981B22EB313800320D52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		876E982F22EB313900320D52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		876E983A22EB313900320D52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		876E981522EB313800320D52 = {
+			isa = PBXGroup;
+			children = (
+				876E982022EB313800320D52 /* MassageAppIOS */,
+				876E983522EB313900320D52 /* MassageAppIOSTests */,
+				876E984022EB313900320D52 /* MassageAppIOSUITests */,
+				876E981F22EB313800320D52 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		876E981F22EB313800320D52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				876E981E22EB313800320D52 /* MassageAppIOS.app */,
+				876E983222EB313900320D52 /* MassageAppIOSTests.xctest */,
+				876E983D22EB313900320D52 /* MassageAppIOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		876E982022EB313800320D52 /* MassageAppIOS */ = {
+			isa = PBXGroup;
+			children = (
+				876E982122EB313800320D52 /* AppDelegate.swift */,
+				876E982322EB313800320D52 /* ViewController.swift */,
+				876E982522EB313800320D52 /* Main.storyboard */,
+				876E982822EB313900320D52 /* Assets.xcassets */,
+				876E982A22EB313900320D52 /* LaunchScreen.storyboard */,
+				876E982D22EB313900320D52 /* Info.plist */,
+			);
+			path = MassageAppIOS;
+			sourceTree = "<group>";
+		};
+		876E983522EB313900320D52 /* MassageAppIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				876E983622EB313900320D52 /* MassageAppIOSTests.swift */,
+				876E983822EB313900320D52 /* Info.plist */,
+			);
+			path = MassageAppIOSTests;
+			sourceTree = "<group>";
+		};
+		876E984022EB313900320D52 /* MassageAppIOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				876E984122EB313900320D52 /* MassageAppIOSUITests.swift */,
+				876E984322EB313900320D52 /* Info.plist */,
+			);
+			path = MassageAppIOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		876E981D22EB313800320D52 /* MassageAppIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 876E984622EB313900320D52 /* Build configuration list for PBXNativeTarget "MassageAppIOS" */;
+			buildPhases = (
+				876E981A22EB313800320D52 /* Sources */,
+				876E981B22EB313800320D52 /* Frameworks */,
+				876E981C22EB313800320D52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MassageAppIOS;
+			productName = MassageAppIOS;
+			productReference = 876E981E22EB313800320D52 /* MassageAppIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		876E983122EB313900320D52 /* MassageAppIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 876E984922EB313900320D52 /* Build configuration list for PBXNativeTarget "MassageAppIOSTests" */;
+			buildPhases = (
+				876E982E22EB313900320D52 /* Sources */,
+				876E982F22EB313900320D52 /* Frameworks */,
+				876E983022EB313900320D52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				876E983422EB313900320D52 /* PBXTargetDependency */,
+			);
+			name = MassageAppIOSTests;
+			productName = MassageAppIOSTests;
+			productReference = 876E983222EB313900320D52 /* MassageAppIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		876E983C22EB313900320D52 /* MassageAppIOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 876E984C22EB313900320D52 /* Build configuration list for PBXNativeTarget "MassageAppIOSUITests" */;
+			buildPhases = (
+				876E983922EB313900320D52 /* Sources */,
+				876E983A22EB313900320D52 /* Frameworks */,
+				876E983B22EB313900320D52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				876E983F22EB313900320D52 /* PBXTargetDependency */,
+			);
+			name = MassageAppIOSUITests;
+			productName = MassageAppIOSUITests;
+			productReference = 876E983D22EB313900320D52 /* MassageAppIOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		876E981622EB313800320D52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Сергей";
+				TargetAttributes = {
+					876E981D22EB313800320D52 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					876E983122EB313900320D52 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 876E981D22EB313800320D52;
+					};
+					876E983C22EB313900320D52 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 876E981D22EB313800320D52;
+					};
+				};
+			};
+			buildConfigurationList = 876E981922EB313800320D52 /* Build configuration list for PBXProject "MassageAppIOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 876E981522EB313800320D52;
+			productRefGroup = 876E981F22EB313800320D52 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				876E981D22EB313800320D52 /* MassageAppIOS */,
+				876E983122EB313900320D52 /* MassageAppIOSTests */,
+				876E983C22EB313900320D52 /* MassageAppIOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		876E981C22EB313800320D52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				876E982C22EB313900320D52 /* LaunchScreen.storyboard in Resources */,
+				876E982922EB313900320D52 /* Assets.xcassets in Resources */,
+				876E982722EB313800320D52 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		876E983022EB313900320D52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		876E983B22EB313900320D52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		876E981A22EB313800320D52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				876E982422EB313800320D52 /* ViewController.swift in Sources */,
+				876E982222EB313800320D52 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		876E982E22EB313900320D52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				876E983722EB313900320D52 /* MassageAppIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		876E983922EB313900320D52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				876E984222EB313900320D52 /* MassageAppIOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		876E983422EB313900320D52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 876E981D22EB313800320D52 /* MassageAppIOS */;
+			targetProxy = 876E983322EB313900320D52 /* PBXContainerItemProxy */;
+		};
+		876E983F22EB313900320D52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 876E981D22EB313800320D52 /* MassageAppIOS */;
+			targetProxy = 876E983E22EB313900320D52 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		876E982522EB313800320D52 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				876E982622EB313800320D52 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		876E982A22EB313900320D52 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				876E982B22EB313900320D52 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		876E984422EB313900320D52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		876E984522EB313900320D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		876E984722EB313900320D52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S2R484H276;
+				INFOPLIST_FILE = MassageAppIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juniorsoftcorp.MassageAppIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		876E984822EB313900320D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S2R484H276;
+				INFOPLIST_FILE = MassageAppIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juniorsoftcorp.MassageAppIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		876E984A22EB313900320D52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S2R484H276;
+				INFOPLIST_FILE = MassageAppIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juniorsoftcorp.MassageAppIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MassageAppIOS.app/MassageAppIOS";
+			};
+			name = Debug;
+		};
+		876E984B22EB313900320D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S2R484H276;
+				INFOPLIST_FILE = MassageAppIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juniorsoftcorp.MassageAppIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MassageAppIOS.app/MassageAppIOS";
+			};
+			name = Release;
+		};
+		876E984D22EB313900320D52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S2R484H276;
+				INFOPLIST_FILE = MassageAppIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juniorsoftcorp.MassageAppIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MassageAppIOS;
+			};
+			name = Debug;
+		};
+		876E984E22EB313900320D52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S2R484H276;
+				INFOPLIST_FILE = MassageAppIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juniorsoftcorp.MassageAppIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MassageAppIOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		876E981922EB313800320D52 /* Build configuration list for PBXProject "MassageAppIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				876E984422EB313900320D52 /* Debug */,
+				876E984522EB313900320D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		876E984622EB313900320D52 /* Build configuration list for PBXNativeTarget "MassageAppIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				876E984722EB313900320D52 /* Debug */,
+				876E984822EB313900320D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		876E984922EB313900320D52 /* Build configuration list for PBXNativeTarget "MassageAppIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				876E984A22EB313900320D52 /* Debug */,
+				876E984B22EB313900320D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		876E984C22EB313900320D52 /* Build configuration list for PBXNativeTarget "MassageAppIOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				876E984D22EB313900320D52 /* Debug */,
+				876E984E22EB313900320D52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 876E981622EB313800320D52 /* Project object */;
+}
