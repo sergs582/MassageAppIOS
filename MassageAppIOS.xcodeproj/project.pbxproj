@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03FA15DED2233A74C1A07CB8 /* Pods_MassageAppIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74032813B8B7A52348E5A3DE /* Pods_MassageAppIOSUITests.framework */; };
+		3D43E85AAC867F11A3498AB7 /* Pods_MassageAppIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971892D23B96C33B9F7D7E2D /* Pods_MassageAppIOS.framework */; };
+		5C0C88F98F16C2CCA450C5E5 /* Pods_MassageAppIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4674B9FE7E64703B03BAA2E0 /* Pods_MassageAppIOSTests.framework */; };
+		874C7B1622FAEB7900FB99B7 /* Massage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874C7B1522FAEB7900FB99B7 /* Massage.swift */; };
 		876E982222EB313800320D52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876E982122EB313800320D52 /* AppDelegate.swift */; };
 		876E982422EB313800320D52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876E982322EB313800320D52 /* ViewController.swift */; };
 		876E982722EB313800320D52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876E982522EB313800320D52 /* Main.storyboard */; };
@@ -14,6 +18,7 @@
 		876E982C22EB313900320D52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876E982A22EB313900320D52 /* LaunchScreen.storyboard */; };
 		876E983722EB313900320D52 /* MassageAppIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876E983622EB313900320D52 /* MassageAppIOSTests.swift */; };
 		876E984222EB313900320D52 /* MassageAppIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876E984122EB313900320D52 /* MassageAppIOSUITests.swift */; };
+		87ED065F2305958700FEF91E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87ED065E2305958700FEF91E /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00FEC674324AB3C7B8E36793 /* Pods-MassageAppIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MassageAppIOS.release.xcconfig"; path = "Target Support Files/Pods-MassageAppIOS/Pods-MassageAppIOS.release.xcconfig"; sourceTree = "<group>"; };
+		0C378C57E91D8009E3310F07 /* Pods-MassageAppIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MassageAppIOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-MassageAppIOSUITests/Pods-MassageAppIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0F3674A00A2DC46F7D83E885 /* Pods-MassageAppIOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MassageAppIOSUITests.release.xcconfig"; path = "Target Support Files/Pods-MassageAppIOSUITests/Pods-MassageAppIOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4674B9FE7E64703B03BAA2E0 /* Pods_MassageAppIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MassageAppIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74032813B8B7A52348E5A3DE /* Pods_MassageAppIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MassageAppIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		874C7B1522FAEB7900FB99B7 /* Massage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Massage.swift; sourceTree = "<group>"; };
 		876E981E22EB313800320D52 /* MassageAppIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MassageAppIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		876E982122EB313800320D52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		876E982322EB313800320D52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +58,11 @@
 		876E983D22EB313900320D52 /* MassageAppIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MassageAppIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		876E984122EB313900320D52 /* MassageAppIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassageAppIOSUITests.swift; sourceTree = "<group>"; };
 		876E984322EB313900320D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87ED065E2305958700FEF91E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		9561005B6B6D38BA59B6CA1C /* Pods-MassageAppIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MassageAppIOS.debug.xcconfig"; path = "Target Support Files/Pods-MassageAppIOS/Pods-MassageAppIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		971892D23B96C33B9F7D7E2D /* Pods_MassageAppIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MassageAppIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4715E16E46A02D4CEB5712 /* Pods-MassageAppIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MassageAppIOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MassageAppIOSTests/Pods-MassageAppIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED34553BDEB59160941DDD1C /* Pods-MassageAppIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MassageAppIOSTests.release.xcconfig"; path = "Target Support Files/Pods-MassageAppIOSTests/Pods-MassageAppIOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D43E85AAC867F11A3498AB7 /* Pods_MassageAppIOS.framework in Frameworks */,
+				87ED065F2305958700FEF91E /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C0C88F98F16C2CCA450C5E5 /* Pods_MassageAppIOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +87,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03FA15DED2233A74C1A07CB8 /* Pods_MassageAppIOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		090AD2A0050CCCBA79867D92 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9561005B6B6D38BA59B6CA1C /* Pods-MassageAppIOS.debug.xcconfig */,
+				00FEC674324AB3C7B8E36793 /* Pods-MassageAppIOS.release.xcconfig */,
+				9A4715E16E46A02D4CEB5712 /* Pods-MassageAppIOSTests.debug.xcconfig */,
+				ED34553BDEB59160941DDD1C /* Pods-MassageAppIOSTests.release.xcconfig */,
+				0C378C57E91D8009E3310F07 /* Pods-MassageAppIOSUITests.debug.xcconfig */,
+				0F3674A00A2DC46F7D83E885 /* Pods-MassageAppIOSUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		876E981522EB313800320D52 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +114,8 @@
 				876E983522EB313900320D52 /* MassageAppIOSTests */,
 				876E984022EB313900320D52 /* MassageAppIOSUITests */,
 				876E981F22EB313800320D52 /* Products */,
+				090AD2A0050CCCBA79867D92 /* Pods */,
+				BAED4F88C7E12688AC3A5EFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +134,7 @@
 			children = (
 				876E982122EB313800320D52 /* AppDelegate.swift */,
 				876E982322EB313800320D52 /* ViewController.swift */,
+				874C7B1522FAEB7900FB99B7 /* Massage.swift */,
 				876E982522EB313800320D52 /* Main.storyboard */,
 				876E982822EB313900320D52 /* Assets.xcassets */,
 				876E982A22EB313900320D52 /* LaunchScreen.storyboard */,
@@ -125,6 +161,17 @@
 			path = MassageAppIOSUITests;
 			sourceTree = "<group>";
 		};
+		BAED4F88C7E12688AC3A5EFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87ED065E2305958700FEF91E /* StoreKit.framework */,
+				971892D23B96C33B9F7D7E2D /* Pods_MassageAppIOS.framework */,
+				4674B9FE7E64703B03BAA2E0 /* Pods_MassageAppIOSTests.framework */,
+				74032813B8B7A52348E5A3DE /* Pods_MassageAppIOSUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 876E984622EB313900320D52 /* Build configuration list for PBXNativeTarget "MassageAppIOS" */;
 			buildPhases = (
+				2CFFC3F6C4EA4508DBCE22ED /* [CP] Check Pods Manifest.lock */,
 				876E981A22EB313800320D52 /* Sources */,
 				876E981B22EB313800320D52 /* Frameworks */,
 				876E981C22EB313800320D52 /* Resources */,
+				2DBB32123B83FEBB60A0E4ED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +198,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 876E984922EB313900320D52 /* Build configuration list for PBXNativeTarget "MassageAppIOSTests" */;
 			buildPhases = (
+				A559D8F8B99CBE02C23434A7 /* [CP] Check Pods Manifest.lock */,
 				876E982E22EB313900320D52 /* Sources */,
 				876E982F22EB313900320D52 /* Frameworks */,
 				876E983022EB313900320D52 /* Resources */,
@@ -167,6 +217,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 876E984C22EB313900320D52 /* Build configuration list for PBXNativeTarget "MassageAppIOSUITests" */;
 			buildPhases = (
+				F29F1C5FAD6ECA065C4EED93 /* [CP] Check Pods Manifest.lock */,
 				876E983922EB313900320D52 /* Sources */,
 				876E983A22EB313900320D52 /* Frameworks */,
 				876E983B22EB313900320D52 /* Resources */,
@@ -251,11 +302,98 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2CFFC3F6C4EA4508DBCE22ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MassageAppIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DBB32123B83FEBB60A0E4ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MassageAppIOS/Pods-MassageAppIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MassageAppIOS/Pods-MassageAppIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MassageAppIOS/Pods-MassageAppIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A559D8F8B99CBE02C23434A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MassageAppIOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F29F1C5FAD6ECA065C4EED93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MassageAppIOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		876E981A22EB313800320D52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				874C7B1622FAEB7900FB99B7 /* Massage.swift in Sources */,
 				876E982422EB313800320D52 /* ViewController.swift in Sources */,
 				876E982222EB313800320D52 /* AppDelegate.swift in Sources */,
 			);
@@ -363,7 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -418,7 +556,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -430,16 +568,18 @@
 		};
 		876E984722EB313900320D52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9561005B6B6D38BA59B6CA1C /* Pods-MassageAppIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S2R484H276;
 				INFOPLIST_FILE = MassageAppIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.juniorsoftcorp.MassageAppIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juniorsoftcorp.MassageApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -448,16 +588,18 @@
 		};
 		876E984822EB313900320D52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00FEC674324AB3C7B8E36793 /* Pods-MassageAppIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S2R484H276;
 				INFOPLIST_FILE = MassageAppIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.juniorsoftcorp.MassageAppIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juniorsoftcorp.MassageApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,6 +608,7 @@
 		};
 		876E984A22EB313900320D52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A4715E16E46A02D4CEB5712 /* Pods-MassageAppIOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +630,7 @@
 		};
 		876E984B22EB313900320D52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED34553BDEB59160941DDD1C /* Pods-MassageAppIOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +652,7 @@
 		};
 		876E984D22EB313900320D52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C378C57E91D8009E3310F07 /* Pods-MassageAppIOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +673,7 @@
 		};
 		876E984E22EB313900320D52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F3674A00A2DC46F7D83E885 /* Pods-MassageAppIOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
