@@ -12,29 +12,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MassageAppIOS/ViewController.swift"
-            timestampString = "587298858.775555"
+            timestampString = "588249984.047238"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "317"
+            endingLineNumber = "317"
             landmarkName = "changeButtonView(_:ScrollView:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4CA1D309-C6E3-4272-89B1-7F75548C1699"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MassageAppIOS/ViewController.swift"
-            timestampString = "587298858.775913"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "214"
-            endingLineNumber = "214"
-            landmarkName = "MassageBtn(sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,11 +29,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MassageAppIOS/ViewController.swift"
-            timestampString = "587298858.7761641"
+            timestampString = "588249984.04773"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
+            startingLineNumber = "321"
+            endingLineNumber = "321"
             landmarkName = "changeButtonView(_:ScrollView:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -63,11 +46,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MassageAppIOS/ViewController.swift"
-            timestampString = "587298858.77639"
+            timestampString = "588249984.047966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
+            startingLineNumber = "322"
+            endingLineNumber = "322"
             landmarkName = "changeButtonView(_:ScrollView:)"
             landmarkType = "7">
          </BreakpointContent>
