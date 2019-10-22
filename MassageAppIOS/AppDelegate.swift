@@ -15,7 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let save = UserDefaults.standard
+        if  save.value(forKey: "ProVersion") == nil {
+            save.setValue(false, forKey: "ProVersion")
+        }
+        if save.value(forKey: "ReviewLeft") == nil{
+            save.setValue(false, forKey: "ReviewLeft")
+        }
         return true
     }
 
