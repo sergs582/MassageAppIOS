@@ -20,7 +20,8 @@
 		876E983722EB313900320D52 /* MassageAppIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876E983622EB313900320D52 /* MassageAppIOSTests.swift */; };
 		876E984222EB313900320D52 /* MassageAppIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876E984122EB313900320D52 /* MassageAppIOSUITests.swift */; };
 		87ED065F2305958700FEF91E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87ED065E2305958700FEF91E /* StoreKit.framework */; };
-		87FAA6ED2348BE0F00BD148D /* BackgroundSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 87FAA6EC2348BE0F00BD148D /* BackgroundSound.mp3 */; };
+		87F3332124716CB100AAB2D8 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F3332024716CB100AAB2D8 /* UIDevice+Extension.swift */; };
+		87F3332324716E0600AAB2D8 /* BackgroundSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 87F3332224716E0600AAB2D8 /* BackgroundSound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +63,8 @@
 		876E984122EB313900320D52 /* MassageAppIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassageAppIOSUITests.swift; sourceTree = "<group>"; };
 		876E984322EB313900320D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87ED065E2305958700FEF91E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		87FAA6EC2348BE0F00BD148D /* BackgroundSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BackgroundSound.mp3; path = ../../../../Downloads/BackgroundSound.mp3; sourceTree = "<group>"; };
+		87F3332024716CB100AAB2D8 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		87F3332224716E0600AAB2D8 /* BackgroundSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundSound.mp3; sourceTree = "<group>"; };
 		9561005B6B6D38BA59B6CA1C /* Pods-MassageAppIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MassageAppIOS.debug.xcconfig"; path = "Target Support Files/Pods-MassageAppIOS/Pods-MassageAppIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		971892D23B96C33B9F7D7E2D /* Pods_MassageAppIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MassageAppIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4715E16E46A02D4CEB5712 /* Pods-MassageAppIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MassageAppIOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MassageAppIOSTests/Pods-MassageAppIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,8 +140,9 @@
 			isa = PBXGroup;
 			children = (
 				876E982122EB313800320D52 /* AppDelegate.swift */,
-				87FAA6EC2348BE0F00BD148D /* BackgroundSound.mp3 */,
+				87F3332224716E0600AAB2D8 /* BackgroundSound.mp3 */,
 				876E982322EB313800320D52 /* ViewController.swift */,
+				87F3332024716CB100AAB2D8 /* UIDevice+Extension.swift */,
 				874C7B1522FAEB7900FB99B7 /* Massage.swift */,
 				876E982522EB313800320D52 /* Main.storyboard */,
 				876E982822EB313900320D52 /* Assets.xcassets */,
@@ -289,8 +292,8 @@
 			files = (
 				876E982C22EB313900320D52 /* LaunchScreen.storyboard in Resources */,
 				876E982922EB313900320D52 /* Assets.xcassets in Resources */,
+				87F3332324716E0600AAB2D8 /* BackgroundSound.mp3 in Resources */,
 				876E982722EB313800320D52 /* Main.storyboard in Resources */,
-				87FAA6ED2348BE0F00BD148D /* BackgroundSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +407,7 @@
 				874C7B1622FAEB7900FB99B7 /* Massage.swift in Sources */,
 				876E982422EB313800320D52 /* ViewController.swift in Sources */,
 				876E982222EB313800320D52 /* AppDelegate.swift in Sources */,
+				87F3332124716CB100AAB2D8 /* UIDevice+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,7 +584,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S2R484H276;
 				INFOPLIST_FILE = MassageAppIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -588,6 +592,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.juniorsoftcorp.MassageApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -601,7 +606,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S2R484H276;
 				INFOPLIST_FILE = MassageAppIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -609,6 +614,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.juniorsoftcorp.MassageApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

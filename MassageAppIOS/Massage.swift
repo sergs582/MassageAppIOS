@@ -44,53 +44,169 @@ class Massage {
     
    
     private var currentMassage : [Feedback] = [Feedback]()
-    private let MassagesArray : [[Feedback]] = [[.Vibro, .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Light,
+    private let MassagesArray : [[Feedback]] = [[.Vibro, .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Light,   //1
                                                  .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
                                                  .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
                                                  .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light],
-                                                [.Vibro, .Vibro, .Vibro, .Medium, .Medium, .Vibro, .Heavy, .Light,
                                                  .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light],
-                                                [.Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light],
-                                                [.Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light],
-                                                [.Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light],
-                                                [.Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light],
-                                                [.Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Heavy, .Heavy, .Heavy,
-                                                 .Vibro, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Heavy, .Heavy, .Heavy,
-                                                 .Vibro,.Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Heavy, .Heavy, .Heavy,
-                                                 .Vibro,.Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Heavy, .Heavy, .Heavy,
-                                                 .Vibro,.Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Heavy, .Heavy, .Heavy,
-                                                 .Vibro,.Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Heavy, .Heavy, .Heavy,
-                                                 .Vibro],
-                                                [.Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light],
-                                                [.Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
-                                                 .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light]]
+                                                 .Vibro, .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Vibro, .Heavy, .Light],
+                                                
+                                                
+                                                [.Vibro, .Vibro, .Heavy, .Light, .Heavy, .Light, .Vibro,.Vibro, .Vibro,  //2
+                                                 .Heavy, .Light, .Heavy, .Light, .Vibro, .Vibro, .Vibro, .Heavy, .Light,
+                                                 .Heavy, .Light,.Vibro, .Vibro, .Vibro, .Heavy, .Light, .Heavy, .Light,
+                                                    .Vibro,.Vibro, .Vibro, .Heavy, .Light, .Heavy, .Light,
+                                                    .Vibro, .Vibro,.Vibro, .Heavy, .Light, .Heavy, .Light,
+                                                    .Vibro,.Vibro,.Vibro, .Light, .Heavy, .Light, .Heavy,
+                                                    .Vibro, .Vibro, .Heavy, .Light, .Heavy, .Light, .Vibro,.Vibro, .Vibro,
+                                                    .Heavy, .Light, .Heavy, .Light, .Vibro, .Vibro, .Vibro, .Heavy, .Light,
+                                                    .Heavy, .Light,.Vibro, .Vibro, .Vibro, .Heavy, .Light, .Heavy, .Light,
+                                                    .Vibro,.Vibro, .Vibro, .Heavy, .Light, .Heavy, .Light,
+                                                    .Vibro, .Vibro,.Vibro, .Heavy, .Light, .Heavy, .Light,
+                                                    .Vibro,.Vibro,.Vibro, .Light, .Heavy, .Light, .Heavy],
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                [.Vibro, .Heavy, .Heavy, .Heavy, .Heavy,
+                                                 .Vibro, .Heavy, .Heavy, .Heavy, .Heavy,
+                                                 .Vibro, .Heavy, .Heavy, .Heavy, .Heavy,
+                                                 .Vibro, .Heavy, .Heavy, .Heavy, .Heavy,
+                                                 .Vibro, .Heavy, .Heavy, .Heavy, .Heavy,
+                                                 .Vibro, .Heavy, .Heavy, .Heavy, .Heavy,
+                                                 .Vibro, .Heavy, .Heavy, .Heavy, .Heavy,
+                                                 .Vibro, .Heavy, .Heavy, .Heavy, .Heavy,
+                                                 .Vibro, .Heavy, .Heavy, .Heavy, .Heavy,
+                                                 .Vibro, .Heavy, .Heavy, .Heavy, .Heavy,
+                                                 .Vibro, .Heavy, .Heavy, .Heavy, .Heavy],
+                                                
+                                                
+                                                [.Heavy, .Heavy, .Heavy, .Medium, .Medium, .Medium, .Light, .Light, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Medium, .Light, .Light, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Medium, .Light, .Light, .Vibro,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Medium, .Light, .Light, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Medium, .Light, .Light, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Medium, .Light, .Light, .Vibro,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Medium, .Light, .Light, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Medium, .Light, .Light, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Medium, .Light, .Light, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Medium, .Light, .Light, .Vibro,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Medium, .Light, .Light, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Medium, .Light, .Light, .Vibro],
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                [.Heavy, .Heavy, .Light, .Light,
+                                                 .Heavy, .Heavy, .Light, .Light,
+                                                 .Heavy, .Heavy, .Light, .Light,
+                                                 .Heavy, .Heavy, .Light, .Light,
+                                                 .Heavy, .Heavy, .Light, .Light,
+                                                .Heavy, .Heavy, .Light, .Light,
+                                                .Heavy, .Heavy, .Light, .Light,
+                                                .Heavy, .Heavy, .Light, .Light,
+                                                .Heavy, .Heavy, .Light, .Light,
+                                                .Heavy, .Heavy, .Light, .Light,
+                                                .Heavy, .Heavy, .Light, .Light,
+                                                 .Heavy, .Heavy, .Light, .Light,
+                                                 .Heavy, .Heavy, .Light, .Light,
+                                                 .Heavy, .Heavy, .Light, .Light,
+                                                .Heavy, .Heavy, .Light, .Light,
+                                                .Heavy, .Heavy, .Light, .Light,
+                                                .Heavy, .Heavy, .Light, .Light,
+                                                .Heavy, .Heavy, .Light, .Light,
+                                                .Heavy, .Heavy, .Light, .Light],
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                [.Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Vibro, .Vibro, .Heavy, .Heavy, .Heavy,
+                                                 .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Vibro, .Vibro, .Heavy, .Heavy, .Heavy,
+                                                 .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Vibro, .Vibro, .Heavy, .Heavy, .Heavy,
+                                                 .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Vibro, .Vibro, .Heavy, .Heavy, .Heavy,
+                                                 .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Vibro, .Vibro, .Heavy, .Heavy, .Heavy,
+                                                 .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Vibro, .Vibro, .Heavy, .Heavy, .Heavy,
+                                                 .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Vibro, .Vibro, .Heavy, .Heavy, .Heavy,
+                                                 .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Vibro, .Vibro, .Heavy, .Heavy, .Heavy,
+                                                 .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Vibro, .Vibro, .Heavy, .Heavy, .Heavy,
+                                                 .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Vibro, .Vibro, .Heavy, .Heavy, .Heavy,
+                                                 .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Vibro, .Vibro, .Heavy, .Heavy, .Heavy,
+                                                 .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Vibro, .Vibro, .Heavy, .Heavy, .Heavy,
+                                                 .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Vibro, .Vibro, .Heavy, .Heavy, .Heavy,
+                                                 .Heavy, .Heavy, .Vibro, .Vibro, .Heavy, .Vibro, .Vibro, .Heavy, .Heavy, .Heavy],
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                               [.Heavy, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy,
+                                                .Heavy, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy, .Vibro, .Heavy, .Heavy],
+                                                
+                                                
+                                                
+                                                
+                                               
+                                               [.Vibro, .Vibro, .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Light,
+                                                .Vibro, .Vibro, .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Light,
+                                                .Vibro, .Vibro, .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Light,
+                                                .Vibro, .Vibro, .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Light,
+                                                .Vibro, .Vibro, .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Light,
+                                                .Vibro, .Vibro, .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Light,
+                                                .Vibro, .Vibro, .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Light,
+                                                .Vibro, .Vibro, .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Light,
+                                                .Vibro, .Vibro, .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Light,
+                                                .Vibro, .Vibro, .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Light,
+                                                .Vibro, .Vibro, .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Light,
+                                                .Vibro, .Vibro, .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Light],
+                                               
+                                               
+                                               
+                                               [.Heavy, .Heavy, .Heavy, .Medium, .Medium, .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium, .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light,
+                                                .Heavy, .Heavy, .Heavy, .Medium, .Medium,  .Heavy, .Light]]
     
     let heavyImpactGenerator = UIImpactFeedbackGenerator(style: .heavy)
     let lightImpactGenerator = UIImpactFeedbackGenerator(style: .light)
@@ -112,12 +228,23 @@ class Massage {
         timer.invalidate()
         
         
-        let TimeInterval = 0.3
+        var TimeInterval = 0.3
+        
+        if mode!.rawValue == 7{
+            TimeInterval = 0.2
+        } else if mode!.rawValue == 8{
+            TimeInterval = 0.08
+        }
         
         if mode!.rawValue < 9{
             currentMassage = MassagesArray[mode!.rawValue]
         }else{
+             if UserDefaults.standard.bool(forKey: "ProVersion"){
             currentMassage = MassagesArray.randomElement()!
+             }else{
+                
+                currentMassage = MassagesArray[Int.random(in: 0...3)]
+            }
         }
         
         duration = TimeInterval * Double(currentMassage.count + 1)

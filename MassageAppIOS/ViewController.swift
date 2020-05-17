@@ -11,7 +11,7 @@ import AVFoundation
 import AudioToolbox
 import GoogleMobileAds
 
-class ViewController: UIViewController, UIScrollViewDelegate, GADBannerViewDelegate, GADRewardBasedVideoAdDelegate, SKPaymentTransactionObserver, SKProductsRequestDelegate {
+class ViewController: UIViewController, UIScrollViewDelegate, GADBannerViewDelegate, GADRewardedAdDelegate, SKPaymentTransactionObserver, SKProductsRequestDelegate {
     
     enum Mode {
         case dark
@@ -51,6 +51,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, GADBannerViewDeleg
     
     var isPlaying : Bool = false
     var videoAdIsPlayed : Bool = false
+    var isProPurchaseEnabled = false
     
     var subViewsArray : [UIView] = [UIView]()
     var progressViewsArray : [UIView] = [UIView]()
@@ -67,7 +68,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, GADBannerViewDeleg
     var isSoundEnabled : Bool = true
     
     var isProVersionPurchased : Bool = false
-    var ProButtonsTagRange : ClosedRange<Int> = 3...8
+    var ProButtonsTagRange : ClosedRange<Int> = 4...8
     var WatchVideoButtonsArray : [UIButton] = [UIButton]()
     
   
@@ -76,6 +77,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, GADBannerViewDeleg
     
     @IBOutlet weak var OopsView: UIView!
     @IBOutlet weak var bannerView: GADBannerView!
+    var rewardedAd: GADRewardedAd?
+    
     var BackSound : AVAudioPlayer!
     var soundTimer = Timer()
     
@@ -141,11 +144,18 @@ class ViewController: UIViewController, UIScrollViewDelegate, GADBannerViewDeleg
     
         @objc func GetPro(){
             let alert = UIAlertController(title: "Full Version", message: "Do you want to get all massage modes and disable Ad?", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
-                self.buyPro()
-            }))
-            alert.addAction(UIAlertAction(title: "Restore", style: .default, handler: { _ in SKPaymentQueue.default().restoreCompletedTransactions() }))
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            if isProPurchaseEnabled {
+                alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+                    self.buyPro()
+                }))
+                alert.addAction(UIAlertAction(title: "Restore", style: .default, handler: { _ in SKPaymentQueue.default().restoreCompletedTransactions() }))
+                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            }else{
+                
+                alert.message = "Problems with internet connection. Try again later"
+                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            }
+            
             
             present(alert, animated: true, completion: nil)
         }
@@ -183,11 +193,13 @@ class ViewController: UIViewController, UIScrollViewDelegate, GADBannerViewDeleg
              
              if (products.count == 0){
             // message = FailAlertMessage
+                isProPurchaseEnabled = false
             
              }else{
                  product = products[0]
                //  message = product!.localizedDescription
                //  CanCustomizeAlert = true
+                isProPurchaseEnabled = true
              }
              
              let invalid = response.invalidProductIdentifiers
@@ -205,23 +217,32 @@ class ViewController: UIViewController, UIScrollViewDelegate, GADBannerViewDeleg
               // ProVersionAlert.message = "Enable IAP on your device"
            }
        }
-    
-    
-    
-    
-    func initVideoAd(){
-        GADRewardBasedVideoAd.sharedInstance().delegate = self
-        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(), withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
-        
+
+    func initVideoAd() {
+        rewardedAd = GADRewardedAd(adUnitID: "ca-app-pub-5510822664979086/7642804651")
+        loadVideoAd()
     }
     
-    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
+    func loadVideoAd() {
+        rewardedAd?.load(GADRequest()) { error in
+            if let error = error {
+                print("Error in initializing Video AD: \(error.localizedDescription)")
+            } else {
+                print("Video AD Successfully initialized")
+                for button in self.WatchVideoButtonsArray{
+                    button.isEnabled = true
+                    button.alpha = 1
+                }
+            }
+        }
+    }
+    
+    func rewardedAd(_ rewardedAd: GADRewardedAd, userDidEarn reward: GADAdReward) {
         print("Reward received with currency: \(reward.type), amount \(reward.amount).")
         videoAdIsPlayed = true
-        
     }
     
-    func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+    func rewardedAdDidDismiss(_ rewardedAd: GADRewardedAd) {
         if videoAdIsPlayed{
          makeMassage(tag: currentTag)
         }
@@ -229,30 +250,16 @@ class ViewController: UIViewController, UIScrollViewDelegate, GADBannerViewDeleg
             button.isEnabled = false
             button.alpha = 0.5
         }
-      GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
-          withAdUnitID: "ca-app-pub-3940256099942544/1712485313")
-    }
-    
-    func rewardBasedVideoAdDidCompletePlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-     // print("Reward based video ad has completed.")
-       
-    }
-    
-    func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd:GADRewardBasedVideoAd) {
-        for button in WatchVideoButtonsArray{
-            button.isEnabled = true
-            button.alpha = 1
-        }
+        initVideoAd()
     }
     
     func initAdBanner(){
         bannerView.isHidden = true
+        bannerView.adUnitID = "ca-app-pub-5510822664979086/1001280856"
         bannerView.adSize = kGADAdSizeSmartBannerPortrait
         bannerView.delegate = self
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
-               
     }
     
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
@@ -304,7 +311,6 @@ class ViewController: UIViewController, UIScrollViewDelegate, GADBannerViewDeleg
             
             DarkModeButton.setImage(#imageLiteral(resourceName: "LightMode"), for: .normal)
             
-            
             isSoundEnabled ? SoundButton.setImage(#imageLiteral(resourceName: "soundOn_Dark"), for: .normal) : SoundButton.setImage(#imageLiteral(resourceName: "soundOff_Dark"), for: .normal)
             if !isProVersionPurchased{
                 ProButton.setImage(#imageLiteral(resourceName: "pro2_Dark"), for: .normal)
@@ -332,15 +338,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, GADBannerViewDeleg
             }
             TitleLabel.textColor = #colorLiteral(red: 0, green: 0.311291486, blue: 0, alpha: 1)
             Background.image = #imageLiteral(resourceName: "back 4")
-            
         }
-        
-        
-        
     }
-    
-   
-    
     
     @objc func sound(sender : UIButton!){
         if mode == .dark{
@@ -368,7 +367,6 @@ class ViewController: UIViewController, UIScrollViewDelegate, GADBannerViewDeleg
         }
     }
     
-    
     @objc func repeatSound(){
            BackSound.stop()
            BackSound.currentTime = 0
@@ -384,9 +382,6 @@ class ViewController: UIViewController, UIScrollViewDelegate, GADBannerViewDeleg
            BackSound.volume = 0.6
            soundTimer = Timer.scheduledTimer(timeInterval: 50, target: self, selector: #selector(repeatSound), userInfo: nil, repeats: true)
        }
-    
-    
-
     
     // Returns middle of scrollView height for each device
     func getMid() -> Int{
@@ -599,8 +594,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, GADBannerViewDeleg
     ProVersionLayersArray[sender!.tag]?.isHidden = true
     currentTag = sender!.tag
    // makeMassage(tag: sender!.tag)
-    if GADRewardBasedVideoAd.sharedInstance().isReady == true {
-      GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
+    if rewardedAd?.isReady == true {
+      rewardedAd?.present(fromRootViewController: self, delegate: self)
     }
   }
 
@@ -664,104 +659,4 @@ extension UIView {
             self.layer.cornerRadius = 5
      
     }
-}
-
-public extension UIDevice {
-
-    static let modelName: String = {
-        var systemInfo = utsname()
-        uname(&systemInfo)
-        let machineMirror = Mirror(reflecting: systemInfo.machine)
-        let identifier = machineMirror.children.reduce("") { identifier, element in
-            guard let value = element.value as? Int8, value != 0 else { return identifier }
-            return identifier + String(UnicodeScalar(UInt8(value)))
-        }
-
-        func mapToDevice(identifier: String) -> String { // swiftlint:disable:this cyclomatic_complexity
-            #if os(iOS)
-            switch identifier {
-            case "iPod5,1":                                 return "iPod touch (5th generation)"
-            case "iPod7,1":                                 return "iPod touch (6th generation)"
-            case "iPod9,1":                                 return "iPod touch (7th generation)"
-            case "iPhone3,1", "iPhone3,2", "iPhone3,3":     return "iPhone 4"
-            case "iPhone4,1":                               return "iPhone 4s"
-            case "iPhone5,1", "iPhone5,2":                  return "iPhone 5"
-            case "iPhone5,3", "iPhone5,4":                  return "iPhone 5c"
-            case "iPhone6,1", "iPhone6,2":                  return "iPhone 5s"
-            case "iPhone7,2":                               return "iPhone 6"
-            case "iPhone7,1":                               return "iPhone 6 Plus"
-            case "iPhone8,1":                               return "iPhone 6s"
-            case "iPhone8,2":                               return "iPhone 6s Plus"
-            case "iPhone9,1", "iPhone9,3":                  return "iPhone 7"
-            case "iPhone9,2", "iPhone9,4":                  return "iPhone 7 Plus"
-            case "iPhone8,4":                               return "iPhone SE"
-            case "iPhone10,1", "iPhone10,4":                return "iPhone 8"
-            case "iPhone10,2", "iPhone10,5":                return "iPhone 8 Plus"
-            case "iPhone10,3", "iPhone10,6":                return "iPhone X"
-            case "iPhone11,2":                              return "iPhone XS"
-            case "iPhone11,4", "iPhone11,6":                return "iPhone XS Max"
-            case "iPhone11,8":                              return "iPhone XR"
-            case "iPhone12,1":                              return "iPhone 11"
-            case "iPhone12,3":                              return "iPhone 11 Pro"
-            case "iPhone12,5":                              return "iPhone 11 Pro Max"
-            case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":return "iPad 2"
-            case "iPad3,1", "iPad3,2", "iPad3,3":           return "iPad (3rd generation)"
-            case "iPad3,4", "iPad3,5", "iPad3,6":           return "iPad (4th generation)"
-            case "iPad6,11", "iPad6,12":                    return "iPad (5th generation)"
-            case "iPad7,5", "iPad7,6":                      return "iPad (6th generation)"
-            case "iPad7,11", "iPad7,12":                    return "iPad (7th generation)"
-            case "iPad4,1", "iPad4,2", "iPad4,3":           return "iPad Air"
-            case "iPad5,3", "iPad5,4":                      return "iPad Air 2"
-            case "iPad11,4", "iPad11,5":                    return "iPad Air (3rd generation)"
-            case "iPad2,5", "iPad2,6", "iPad2,7":           return "iPad mini"
-            case "iPad4,4", "iPad4,5", "iPad4,6":           return "iPad mini 2"
-            case "iPad4,7", "iPad4,8", "iPad4,9":           return "iPad mini 3"
-            case "iPad5,1", "iPad5,2":                      return "iPad mini 4"
-            case "iPad11,1", "iPad11,2":                    return "iPad mini (5th generation)"
-            case "iPad6,3", "iPad6,4":                      return "iPad Pro (9.7-inch)"
-            case "iPad6,7", "iPad6,8":                      return "iPad Pro (12.9-inch)"
-            case "iPad7,1", "iPad7,2":                      return "iPad Pro (12.9-inch) (2nd generation)"
-            case "iPad7,3", "iPad7,4":                      return "iPad Pro (10.5-inch)"
-            case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4":return "iPad Pro (11-inch)"
-            case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8":return "iPad Pro (12.9-inch) (3rd generation)"
-            case "AppleTV5,3":                              return "Apple TV"
-            case "AppleTV6,2":                              return "Apple TV 4K"
-            case "AudioAccessory1,1":                       return "HomePod"
-            case "i386", "x86_64":                          return "Simulator \(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS"))"
-            default:                                        return identifier
-            }
-            #elseif os(tvOS)
-            switch identifier {
-            case "AppleTV5,3": return "Apple TV 4"
-            case "AppleTV6,2": return "Apple TV 4K"
-            case "i386", "x86_64": return "Simulator \(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "tvOS"))"
-            default: return identifier
-            }
-            #endif
-        }
-
-        return mapToDevice(identifier: identifier)
-    }()
-
-    
-    func DeviceHasTapticEngine() -> Bool{
-        
-        var name = UIDevice.modelName.split(separator: " ")
-        if name[0] == "Simulator"{
-            name.remove(at: 0)
-        }
-        if name[0] == "iPhone"{
-            if name[1] == "6" || name[1] == "5s" || name[1] == "4s" || name[1] == "4" || name[1] == "5c" || name[1] == "SE"{
-                return false
-            }else{
-            return true
-            }
-            }else{
-            return false
-            }
-        
-        
-    }
-    
-    
 }
